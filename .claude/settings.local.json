@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\wamp64\\\\www\\\\agrigenuis\\\\frontend\\\\components\\\\ui\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\wamp64\\\\www\\\\agrigenuis\\\\frontend\\\\components\\\\layout\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\wamp64\\\\www\\\\agrigenuis\\\\frontend\\\\components\\\\sections\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\wamp64\\\\www\\\\agrigenuis\\\\frontend\\\\lib\")",
+      "PowerShell(Set-Location \"C:\\\\wamp64\\\\www\\\\agrigenuis\\\\backend\"; $env:PYTHONIOENCODING=\"utf-8\"; python seed_quiz.py 2>&1 | ForEach-Object { $_ -replace '[^\\\\x00-\\\\x7F]','?' })",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git rm *)"
+    ]
+  }
+}

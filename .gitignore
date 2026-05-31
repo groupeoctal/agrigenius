@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+venv/
+env/
+.env
+*.pyc
+
+# Node
+node_modules/
+.next/
+.turbo/
+out/
+dist/
+*.tsbuildinfo
+
+# Uploads (fichiers utilisateurs)
+backend/uploads/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Secrets
+*.env
+*.env.local
+!frontend/.env.local.example
