@@ -1,6 +1,29 @@
-# 🌾 AgriGenius - Plateforme Intelligente de Digitalisation Agricole
+<p align="center">
+  <img src="agris.PNG" alt="AgriGenius Logo" width="200"/>
+</p>
 
-![AgriGenius](agris.PNG)
+<h1 align="center">🌾 AgriGenius</h1>
+<h3 align="center">Plateforme Intelligente de Digitalisation Agricole</h3>
+
+<p align="center">
+  <a href="https://github.com/groupeoctal/agrigenius/stargazers"><img src="https://img.shields.io/github/stars/groupeoctal/agrigenius" alt="Stars Badge"/></a>
+  <a href="https://github.com/groupeoctal/agrigenius/network/members"><img src="https://img.shields.io/github/forks/groupeoctal/agrigenius" alt="Forks Badge"/></a>
+  <a href="https://github.com/groupeoctal/agrigenius/pulls"><img src="https://img.shields.io/github/issues-pr/groupeoctal/agrigenius" alt="Pull Requests Badge"/></a>
+  <a href="https://github.com/groupeoctal/agrigenius/issues"><img src="https://img.shields.io/github/issues/groupeoctal/agrigenius" alt="Issues Badge"/></a>
+  <a href="https://github.com/groupeoctal/agrigenius/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/groupeoctal/agrigenius?color=2b9348"></a>
+  <a href="https://github.com/groupeoctal/agrigenius/blob/main/LICENSE"><img src="https://img.shields.io/github/license/groupeoctal/agrigenius?color=2b9348" alt="License Badge"/></a>
+</p>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Next.js-16.2.6-black?logo=next.js" alt="Next.js"/>
+<img src="https://img.shields.io/badge/FastAPI-0.100+-green?logo=fastapi" alt="FastAPI"/>
+<img src="https://img.shields.io/badge/TypeScript-5-blue?logo=typescript" alt="TypeScript"/>
+<img src="https://img.shields.io/badge/Python-3.13-blue?logo=python" alt="Python"/>
+<img src="https://img.shields.io/badge/MySQL-8.0-orange?logo=mysql" alt="MySQL"/>
+<img src="https://img.shields.io/badge/PWA-Enabled-purple" alt="PWA"/>
+</p>
+
+---
 
 > Plateforme web complète pour la digitalisation de l'agriculture au Cameroun avec Intelligence Artificielle, formation en ligne et marketplace agricole.
 
