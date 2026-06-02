@@ -81,6 +81,30 @@ def get_cours(
         } if quiz_resultat else None,
     }
 
+@router.get("/cours/{cours_id}/modules")
+def get_cours_modules(
+    cours_id: int,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    """Récupérer uniquement les modules d'un cours"""
+    cours = db.query(Cours).filter(Cours.id == cours_id).first()
+    if not cours:
+        raise HTTPException(status_code=404, detail="Cours introuvable")
+
+    modules = [
+        {
+            "id": m.id,
+            "titre": m.titre,
+            "contenu": m.contenu,
+            "video_url": m.video_url,
+            "ordre": m.ordre
+        }
+        for m in sorted(cours.modules, key=lambda x: x.ordre)
+    ]
+
+    return modules
+
 @router.post("/cours/{cours_id}/progression")
 def update_progression(
     cours_id: int,

@@ -7,7 +7,7 @@ from app.core.config import settings
 from app.core.database import engine, Base
 from app.models import *  # importer tous les modèles pour la création des tables
 
-from app.api.routes import auth, users, diagnostics, marketplace, formation
+from app.api.routes import auth, users, diagnostics, marketplace, formation, notifications, dashboard, admin
 
 # Créer les tables en base de données
 Base.metadata.create_all(bind=engine)
@@ -15,6 +15,7 @@ Base.metadata.create_all(bind=engine)
 # Créer les dossiers d'upload
 os.makedirs("uploads/diagnostics", exist_ok=True)
 os.makedirs("uploads/marketplace", exist_ok=True)
+os.makedirs("uploads/profile_photos", exist_ok=True)
 
 app = FastAPI(
     title=settings.APP_NAME,
@@ -33,15 +34,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Servir les fichiers uploadés
-app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
+# Routes API (AVANT le montage des fichiers statiques)
+app.include_router(auth.router,          prefix="/api")
+app.include_router(users.router,         prefix="/api")
+app.include_router(diagnostics.router,   prefix="/api")
+app.include_router(marketplace.router,   prefix="/api")
+app.include_router(formation.router,     prefix="/api")
+app.include_router(notifications.router, prefix="/api")
+app.include_router(dashboard.router,     prefix="/api")
+app.include_router(admin.router,         prefix="/api")
 
-# Routes
-app.include_router(auth.router,        prefix="/api")
-app.include_router(users.router,       prefix="/api")
-app.include_router(diagnostics.router, prefix="/api")
-app.include_router(marketplace.router, prefix="/api")
-app.include_router(formation.router,   prefix="/api")
+# Servir les fichiers uploadés (APRÈS les routes API)
+app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 
 @app.get("/")
 def root():

@@ -248,9 +248,38 @@ def _serialize_annonce(a: Annonce, db: Session, detail: bool = False) -> dict:
     return data
 
 def _serialize_commande(c: Commande) -> dict:
+    # Récupérer l'annonce et l'acheteur
+    annonce = c.annonce
+    acheteur = c.acheteur
+
     return {
         "id": c.id, "annonce_id": c.annonce_id,
         "quantite": c.quantite, "prix_total": c.prix_total,
         "statut": c.statut, "message": c.message,
         "created_at": c.created_at.isoformat() if c.created_at else None,
+        # Informations sur l'annonce
+        "annonce": {
+            "id": annonce.id,
+            "titre": annonce.titre,
+            "culture": annonce.culture,
+            "prix": annonce.prix,
+            "unite": annonce.unite,
+            "image": annonce.image,
+            "vendeur": {
+                "id": annonce.vendeur.id,
+                "nom": annonce.vendeur.nom,
+                "prenom": annonce.vendeur.prenom,
+                "telephone": annonce.vendeur.telephone,
+                "region": annonce.vendeur.region,
+            } if annonce.vendeur else None,
+        } if annonce else None,
+        # Informations sur l'acheteur
+        "acheteur": {
+            "id": acheteur.id,
+            "nom": acheteur.nom,
+            "prenom": acheteur.prenom,
+            "telephone": acheteur.telephone,
+            "region": acheteur.region,
+            "email": acheteur.email,
+        } if acheteur else None,
     }
