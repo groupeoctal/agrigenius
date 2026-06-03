@@ -250,19 +250,6 @@ export default function LoginPage() {
           </Link>
         </p>
 
-        {/* Aide test */}
-        <div style={{
-          marginTop: 20, padding: "12px 16px",
-          background: "#f0faf4", borderRadius: 10,
-          border: "1px solid rgba(26,107,60,0.15)",
-        }}>
-          <p style={{ fontSize: 11, color: "#1A6B3C", fontWeight: 600, marginBottom: 4 }}>
-            🧪 Compte de test
-          </p>
-          <p style={{ fontSize: 11, color: "#5a5650" }}>
-            Email : test@agrigenius.cm · Mot de passe : password
-          </p>
-        </div>
       </div>
     </div>
   )

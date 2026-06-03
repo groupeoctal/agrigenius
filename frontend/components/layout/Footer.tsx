@@ -1,5 +1,6 @@
-import { Leaf, Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -19,10 +20,17 @@ export default function Footer() {
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
               <div style={{
                 width: 36, height: 36, borderRadius: 10,
-                background: "linear-gradient(135deg, #1A6B3C, #4CAF50)",
                 display: "flex", alignItems: "center", justifyContent: "center",
+                overflow: "hidden",
+                background: "white",
               }}>
-                <Leaf size={18} color="white" />
+                <Image
+                  src="/logo.png"
+                  alt="AgriGenius Logo"
+                  width={36}
+                  height={36}
+                  style={{ objectFit: "contain" }}
+                />
               </div>
               <span style={{
                 fontFamily: "var(--font-display)", fontSize: 20,
