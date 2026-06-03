@@ -1,0 +1,139 @@
+{
+  "name": "AgriGenius - Plateforme Agricole Intelligente",
+  "short_name": "AgriGenius",
+  "description": "Plateforme intelligente de digitalisation agricole au Cameroun avec diagnostic IA, formation et marketplace",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#22c55e",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": [
+    "agriculture",
+    "education",
+    "business",
+    "productivity"
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/dashboard.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Tableau de bord AgriGenius"
+    },
+    {
+      "src": "/screenshots/diagnostic.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Diagnostic phytosanitaire IA"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Diagnostic Phyto",
+      "short_name": "Diagnostic",
+      "description": "Lancer un diagnostic phytosanitaire",
+      "url": "/dashboard/diagnostic/phyto",
+      "icons": [
+        {
+          "src": "/icons/shortcut-diagnostic.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Formations",
+      "short_name": "Cours",
+      "description": "Accéder aux formations agricoles",
+      "url": "/dashboard/formation",
+      "icons": [
+        {
+          "src": "/icons/shortcut-formation.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Marketplace",
+      "short_name": "Marché",
+      "description": "Accéder au marketplace agricole",
+      "url": "/dashboard/marketplace",
+      "icons": [
+        {
+          "src": "/icons/shortcut-marketplace.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/dashboard/diagnostic/phyto",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "files": [
+        {
+          "name": "image",
+          "accept": ["image/*"]
+        }
+      ]
+    }
+  },
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "lang": "fr",
+  "dir": "ltr"
+}
